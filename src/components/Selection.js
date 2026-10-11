@@ -4,20 +4,17 @@ import '../styles/Child.css';
 
 
 const Selection = ({ text, applyColor }) => {
-    const [color, setColor] = useState(null);
-    function updateSelectionStyle(obj) {
-        setColor(obj.background);
-        
-    }
+   const [style, setStyle] = useState("");
    
-    const colorChange = (e) => {
-        applyColor(updateSelectionStyle);
-        console.log(color);
-        console.log(e.target);
-       // e.target.style.background = color;
-    }
+   
+    // const colorChange = (e) => {
+    //     applyColor(updateSelectionStyle);
+    //     console.log(color);
+    //     console.log(e.target);
+    //    // e.target.style.background = color;
+    // }
     return (
-        <div className="fix-box" style={{ backgroundColor: color }} onClick={colorChange}>
+        <div className="fix-box" style={{ backgroundColor: style }} onClick={() => applyColor(setStyle)}>
             <p className='subheading'>{text}</p>
         </div>
     )
