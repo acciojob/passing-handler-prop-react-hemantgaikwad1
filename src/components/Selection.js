@@ -17,7 +17,7 @@ const Selection = ({ text, applyColor }) => {
        // e.target.style.background = color;
     }
     return (
-        <div className="fix-box" style={{ background: color }} onClick={colorChange}>
+        <div className="fix-box" style={{ backgroundColor: color }} onClick={colorChange}>
             <p className='subheading'>{text}</p>
         </div>
     )
