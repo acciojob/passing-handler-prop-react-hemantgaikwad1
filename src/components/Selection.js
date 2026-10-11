@@ -4,7 +4,7 @@ import '../styles/Child.css';
 
 
 const Selection = ({ text, applyColor }) => {
-   const [style, setStyle] = useState({ background: "" });
+const [nextBackground, updateSelectionStyle] = useState({ background: "" });
    
    
     // const colorChange = (e) => {
@@ -14,7 +14,8 @@ const Selection = ({ text, applyColor }) => {
     //    // e.target.style.background = color;
     // }
     return (
-        <div className="fix-box" style={style} onClick={() => applyColor(setStyle)}>
+        <div className="fix-box" style={nextBackground}
+      onClick={() => applyColor(updateSelectionStyle)}>
             <p className='subheading'>{text}</p>
         </div>
     )
